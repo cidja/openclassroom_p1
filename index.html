@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--Petits commentaires concernant la mise en page 
+- a chaque balise je mets l'id en PREMIER
+(exemple= 'img id='blabla' src='tete.png' alt='image de tete')
+    
+contact pour maintenance ou renseignement sur le code : cidja@hotmail.fr -->
+
+<html>
+    <head>
+        <title>
+            Webagency
+        </title>
+        <meta charset='utf8' />
+        <link rel='stylesheet' href='style.css' /> <!--Lien pour la feuille de style-->
+    </head>
+
+    <body>
+        <header> <!--Qui constitue le haut du site en position fixed-->
+            <img id='logo' src='images/logo.png' alt='logo de web agency' title='voici notre logo' />
+            <nav>
+                <ul class='menu'> <!--Menu qui devra être fixe toujours affiché en haut, utilsation de class avoir un unique-->
+                    <li  id='menu_element'><a href='#accueil'>Accueil</a></li> <!--Les liens ne donnent sur rien mais j'ai mis des liens pour pouvoir faire une régle :hover dessus-->
+                    <li  id='menu_element'><a href='#services'>Services</a></li><!--href avec des ancres pour renvoyer dans chaque partie de la page-->
+                    <li  id='menu_element'><a href='#projets'>Portofolio</a></li>
+                    <li  id='menu_element'><a href='#contact'>Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        
+        <!--Section accueil-->
+        <section id='accueil'>
+            <!--les images du slide sont passés en css via background-image-->
+                <div id='texte_slide'>
+                    <h1>WEBGAGENCY : L'AGENCE DE TOUS VOS PROJETS !</h1>
+                    <p>Vous avez un projet web ? la webagency vous aide à le réaliser !</p>
+                    <input type='button' value="plus d'infos" />
+                </div>
+
+           
+        </section>
+
+        <!--Section services-->
+        <section id='services'>
+                <h2 id='titre_services'>Nos services </h2>
+                    <img class='img_services' src='images/main-feature.png' alt="dessin d'ordinateur" /> 
+                    <p>Web agency est une agence au TOP de la technologie, venez tester notre showroom
+                        interactif en réalitée augmentée pour montrer à vos clients le futur du web 3.0
+                    </p>
+                    <article id='para_services'>
+                    <h3>UX Design</h3>
+                        <p>L'UX-Design (User eXperience Design) est une discipline dont l'objectif est de concevoir 
+                            un produit au service des utilisateurs. La difficulté est alors de faire rencontrer la 
+                            stratégie du premier avec la réalité des derniers. 
+                        </p>
+                    <h3>UI Design</h3>
+                        <p>UI est l’abréviation d’user interface ou interface utilisateur. L’UI design se rapporte donc à l’environnement
+                            graphique dans lequel évolue l’utilisateur d’un logiciel, d’un site web ou d’une application.
+                        </p>
+                    <h3>SEO</h3>
+                    <p>L'optimisation pour les moteurs de recherche, référencement naturel ou SEO (pour search engine optimization), 
+                        est un ensemble de techniques visant à optimiser la visibilité d'une page web.
+                    </p>
+                </article>
+
+        </section>
+
+        <!--Section exemple_projets-->
+        <section id='projets'>
+            <h2>Nos projets</h2>
+            <p class='p_projets'>Vous allez découvrir en dessous tout nos projets de création que nous mettons a disposition.
+               Si quelque chose vous intéresse rapprochez vous de nous.
+            </p>
+            <table id='bouton_projets'>
+                <tr>
+                    <td>All Works</td>
+                    <td>Creative</td>
+                    <td>Corporate</td>
+                    <td>Portfolio</td>
+                </tr>
+            </table>
+            <div id='conteneur'> <!--Conteneur qui va servir pour faire le portofolio avec un display: flexbox-->
+                
+                <div class='element'><img src='images/portofolio/01.jpg' alt='lunettes' /></div>
+                <div class='element'><img src='images/portofolio/02.jpg' alt='lapin' /></div>
+                <div class='element'><img src='images/portofolio/03.jpg' alt='logo pompadour' /></div>
+                <div class='element'><img src='images/portofolio/04.jpg' alt='une feuille de papier' /></div>
+                <div class='element'><img src='images/portofolio/05.jpg' alt='deux sacs de shopping' /></div>
+                <div class='element'><img src='images/portofolio/06.jpg' alt='une ville au loin avec un pont en premier plan' /></div>
+                <div class='element'><img src='images/portofolio/07.jpg' alt='logo de fusée qui décolle' /></div>
+                <div class='element'><img src='images/portofolio/08.jpg' alt='plusieurs outils de bureau' /></div>
+                
+            </div>
+
+        </section>
+        
+        <!--Bas de la page avec les infos de l'agence (carte et formulaire de contact-->
+        <footer id='contact'> <!--Va rassembler la carte et aussi le formulaire de contact-->
+            <div id='carte'>
+                <!--Code pour la carte maps source: https://embedgooglemaps.com/fr/ -->
+                <div style="overflow:hidden;width: 1600px;position: relative;"><iframe width="1600" height="550" src="https://maps.google.com/maps?width=1600&amp;height=550&amp;hl=en&amp;q=rue%20des%20trois%20conils%2C%20bordeaux+(Webagency)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/en/">embedgooglemaps FR</a> & <a href="https://lasagradafamiliatickets.de/la-sagrada-familia-ticket/">buch voraus</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+            </div>
+
+            <div id='form_contact'> <!--formulaire de contact ne dois pas être fonctionnel-->
+                <form method='post' action='validation_contact_form'>
+                    Contact info <br />
+                    Webagency SAS <br />
+                    3 Rue des trois conils, 33000 Bordeaux<br />
+                    Tél : 03.42.56.89.85 <br />
+                    <label for='name'>
+                        <!--Input text avec un préremplissage (placeholder) 'votre nom'
+                        mis sur autofocus pour que le visiteur n'est pas a cliquer dessus et un champ required
+                        pour indiquer que le nom est obligatoire pour l'envoi du formulaire (je réutilise la même
+                        forme pour tous les champs) -->
+                        <input type='text' id='name' name='name' placeholder='votre nom' autofocus required /> 
+                    </label>
+
+                    <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+
+                    <label for='mail'>
+                            <input type='email' id='mail' name='mail' placeholder='votre mail' required />
+                    </label>
+
+                    <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+
+                    <label for='subject'>
+                        <input type='text' id='subject' name='subject' placeholder='sujet du message' required />
+                    </label>
+
+                    <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+
+                    <label for='message'>
+                        <input type='text' id='message' name='message' placeholder="a vous d'écrire :)" required />
+                    </label>
+
+                    <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+
+                    <!--Bouton de validation du formulaire-->
+                    <input type='submit' value='envoyer le message' />
+                </form>
+            </div>
+        </footer>
+
+    </body>
+</html>

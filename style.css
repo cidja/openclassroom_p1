@@ -1,0 +1,134 @@
+/*je commence pas l'installation des polices d'écriture, ensuite déclaration des régles css body et générales (h1, p,...)
+pour continuer dans le plus précis avec les class et les id */
+
+/*contact pour maintenance ou renseignement sur le code : cidja@hotmail.fr */
+
+/*Installation des polices d'écritures */
+
+@font-face{ /*Police d'écriture réguliére */
+    font-family: 'Roboto-Regular'; 
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{ /*Police d'écriture large et épaisse (plus que le bold) */
+    font-family: 'Roboto-Black'; 
+    src: url('fonts/Roboto-Black.ttf');
+}
+
+@font-face{ /*Police d'écriture fine */
+    font-family: 'Roboto-Light'; 
+    src: url('fonts/Roboto-Light.ttf')
+    format('truetype');
+}
+@font-face{ /*police d'écriture pour les symboles, avec plusieurs formats */
+    font-family: fontawesome-webfont;
+    src: url('fonts/fontawesome-webfont.eot') format('eot');
+    src: url('fonts/fontawesome-webfont.svg') format('svg');
+    src: url('fonts/fontawesome-webfont.ttf') format('truetype');
+    src: url('fonts/fontawesome-webfont.woff') format('woff');
+    src: url('fonts/fontawesome-webfont.oft') format('otf');  
+}
+
+
+/*paramètres css des balises générales */
+
+body{
+    margin: 0px 1% 0px 1%; /*pour que les éléments collent bien
+                            sur les côtés avec 0px de marge 
+                            et juste 1% de marge droite et gauche pour la lecture des textes*/
+    
+}
+
+h2{ /*tous les titres h1 sont centrés (représente titre services et titre nos projets) */
+    text-align: center;
+}
+
+p{ /*représente paragraphe de services */
+    text-align: justify; /*justification du texte pour les paragraphes pour l'esthétique général */
+}
+
+
+
+
+/*paramètres css des balises id et class */
+
+#logo{ /*placement du logo */
+    float: left; /* mis en float left pour permettre a d'autres éléments de venir a sa droite */
+    padding-left: 10%;
+    padding-bottom: 2%; /* pour laisser de l'espace avec les sliders dessous */
+}
+
+
+/*header de la page */
+.menu{
+    display: flex;
+    flex-direction: row; /* par défaut déjà en row */
+    padding-left: 25%; /* on pousse le menu sur la droite */
+    
+}
+#menu_element{ /*pour les éléments du menu */
+    padding-left: 5%; /*pour écarter chaque menu_element entre eux */
+    list-style-type: none; /* on supprime les puces */
+    font-size: 2em;
+    font-family: Roboto-Light;
+    
+}
+
+a{ /*modification de l'esthétique des liens */
+    text-decoration: none; /*suppression de la décoration des liens (soulignement...) */
+    color: black; /* Mise en couleur des liens sur black pour faire comme une écriture normal */
+}
+
+a:hover{ /*modification du comportement des liens quand on les survols */
+    
+}
+
+
+/*Section accueil slide image */
+#accueil{
+    margin-top: 50px; /* pour laisser de la place au dessus pour le logo et le menu */
+    background-image: url('images/slider/bg1.jpg');
+
+    /*pour avoir l'image en entier et conserver ses proportions */
+    height: 550px; 
+    width: 1600px;
+    
+}
+
+#texte_slide{
+    display: inline-block; /*transformation du conteneur du texte de la slide en inline-block pour pouvoir le modifier en taille à ma guise */
+}
+
+/*section services */
+
+.img_services{
+    float: left;
+}
+
+/*Section projets */
+
+.p_projets{ /*pour le paragraphe projets j'aligne le texte et je mets des marges droites et gauche de 10% */
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#bouton_projets{
+    margin: auto; /* pour centrer le tableau (donc les boutons au milieu de la page) */
+   
+}
+td{
+    border: 2px solid black;
+}
+
+
+#conteneur{ 
+    display: flex; /*pour mettre toutes les images à la suite l'une de l'autre */
+
+}
+
+
+/*Section formulaire et carte google maps */
+#form_contact{
+    border: 2px solid black; /* bordure du formulaire de contact */
+    display: inline-block; /* mis en inline-block  pour redimensionnement facile du block */
+}
